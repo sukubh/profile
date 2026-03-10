@@ -1,0 +1,5 @@
+/* App Container Styles */
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fdf5e6 0%, #f5e6d3 100%);
+}

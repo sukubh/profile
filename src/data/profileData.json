@@ -1,0 +1,43 @@
+{
+  "name": "Sushil Kumar Bhandary",
+  "dob": "08/10/1998",
+  "caste": "Kewat",
+  "height": "5'7\"",
+  "complexion": "Medium",
+  "motherTongue": "Maithili",
+  "religion": "Hindu",
+  "address": "Jhanjharpur, Madhubani, Bihar",
+  "profileImage": "/assets/profile.jpeg",
+  "education": [
+    "Schooling from CBSE Board (Maharishi Vidya Mandir, HOSUR, TAMIL NADU)",
+    "B.Tech (ECE) from Hindusthan Institute of Technology, Coimbatore",
+    "Pursuing Master's - will update soon once it's done 😂"
+  ],
+  "profession": "SDE at Radware(Product-based organization from Israel), Bengaluru",
+  "hobbies": [
+    "Travelling (I have visited around 8 states in India and have also traveled 2 countries.)",
+    "I enjoy walking in mountain valleys"
+  ],
+  "familyDetails": [
+    {
+      "relation": "Father",
+      "name": "Bhola Bhandary",
+      "occupation": "Private org employee"
+    },
+    {
+      "relation": "Mother",
+      "name": "Kumari Devi",
+      "occupation": "Homemaker/ Guardian of my galaxy 😂 "
+    },
+    {
+      "relation": "Younger Sister",
+      "name": "Priya",
+      "occupation": "Business Accountant & Pursuing (MBA) at Adhiyamaan College"
+    },
+    {
+      "relation": "Younger Sister",
+      "name": "Manisha",
+      "occupation": "Pursuing (MBA) at Adhiyamaan College"
+    }
+  ]
+}

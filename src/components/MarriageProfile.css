@@ -1,0 +1,468 @@
+/* MarriageProfile.css - Traditional Indian Marriage Biodata Styling */
+
+.profile-container {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fdf5e6 0%, #f5e6d3 50%, #edd9c4 100%);
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Corner Decorations - Mandala Style */
+.corner-decoration {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23d4a574;stop-opacity:0.3'/%3E%3Cstop offset='100%25' style='stop-color:%23c4956a;stop-opacity:0.2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='90' fill='none' stroke='url(%23grad)' stroke-width='2'/%3E%3Ccircle cx='100' cy='100' r='70' fill='none' stroke='url(%23grad)' stroke-width='1.5'/%3E%3Ccircle cx='100' cy='100' r='50' fill='none' stroke='url(%23grad)' stroke-width='1'/%3E%3Cpath d='M100 10 L100 30 M100 170 L100 190 M10 100 L30 100 M170 100 L190 100' stroke='url(%23grad)' stroke-width='2'/%3E%3Cpath d='M30 30 L50 50 M150 150 L170 170 M170 30 L150 50 M30 170 L50 150' stroke='url(%23grad)' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-size: contain;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.corner-decoration.top-left {
+  top: 0;
+  left: 0;
+}
+
+.corner-decoration.top-right {
+  top: 0;
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.corner-decoration.bottom-left {
+  bottom: 0;
+  left: 0;
+  transform: scaleY(-1);
+}
+
+.corner-decoration.bottom-right {
+  bottom: 0;
+  right: 0;
+  transform: scale(-1, -1);
+}
+
+/* Ganesha Header */
+.ganesha-header {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.ganesha-icon {
+  width: 60px;
+  height: 60px;
+  color: #c45c26;
+  margin-bottom: 5px;
+  filter: drop-shadow(0 2px 4px rgba(196, 92, 38, 0.3));
+}
+
+.ganesha-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #8b4513;
+  font-weight: 500;
+}
+
+/* Main Content Layout */
+.profile-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Photo Section */
+.photo-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.photo-frame {
+  position: relative;
+  padding: 8px;
+  background: linear-gradient(135deg, #d4a574 0%, #c4956a 50%, #b8896a 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(139, 69, 19, 0.3);
+}
+
+.photo-frame::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.profile-photo {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Details Section */
+.details-section {
+  padding: 0 10px;
+}
+
+.detail-group {
+  margin-bottom: 20px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.detail-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #5a3d2b;
+  min-width: 130px;
+  font-size: 0.95rem;
+}
+
+.detail-separator {
+  margin: 0 8px;
+  color: #8b4513;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-family: 'Poppins', sans-serif;
+  color: #4a3728;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.detail-value.name-value {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #3d2914;
+}
+
+/* Section Titles */
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #5a3d2b;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.section-content {
+  font-family: 'Poppins', sans-serif;
+  color: #4a3728;
+  font-size: 0.9rem;
+  margin: 0 0 5px 0;
+  line-height: 1.5;
+}
+
+/* Family Details */
+.family-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.family-member {
+  font-family: 'Poppins', sans-serif;
+  color: #4a3728;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.member-relation {
+  font-weight: 600;
+  color: #5a3d2b;
+}
+
+.member-occupation {
+  display: block;
+  margin-left: 20px;
+  color: #6b5344;
+}
+
+/* Footer */
+.profile-footer {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid rgba(196, 92, 38, 0.2);
+}
+
+.profile-footer p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #c45c26;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(196, 92, 38, 0.2);
+}
+
+/* ========================================
+   TABLET STYLES (768px and up)
+   ======================================== */
+@media (min-width: 768px) {
+  .profile-container {
+    padding: 40px;
+  }
+
+  .corner-decoration {
+    width: 200px;
+    height: 200px;
+  }
+
+  .ganesha-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .ganesha-text {
+    font-size: 1.3rem;
+  }
+
+  .profile-content {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .photo-section {
+    order: 2;
+    margin-bottom: 0;
+    position: sticky;
+    top: 40px;
+  }
+
+  .photo-frame {
+    padding: 10px;
+  }
+
+  .profile-photo {
+    width: 250px;
+    height: 300px;
+  }
+
+  .details-section {
+    order: 1;
+    padding: 0;
+  }
+
+  .detail-label {
+    min-width: 160px;
+    font-size: 1rem;
+  }
+
+  .detail-value {
+    font-size: 1rem;
+  }
+
+  .detail-value.name-value {
+    font-size: 1.3rem;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+  }
+
+  .section-content,
+  .family-member {
+    font-size: 1rem;
+  }
+}
+
+/* ========================================
+   DESKTOP STYLES (1024px and up)
+   ======================================== */
+@media (min-width: 1024px) {
+  .profile-container {
+    padding: 60px 80px;
+  }
+
+  .corner-decoration {
+    width: 250px;
+    height: 250px;
+  }
+
+  .ganesha-header {
+    margin-bottom: 40px;
+  }
+
+  .ganesha-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .ganesha-text {
+    font-size: 1.5rem;
+  }
+
+  .profile-content {
+    grid-template-columns: 1fr 350px;
+    gap: 60px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(139, 69, 19, 0.1);
+    backdrop-filter: blur(10px);
+  }
+
+  .photo-frame {
+    padding: 12px;
+  }
+
+  .profile-photo {
+    width: 320px;
+    height: 400px;
+  }
+
+  .detail-group {
+    margin-bottom: 25px;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    border-left: 4px solid #c45c26;
+  }
+
+  .detail-row {
+    margin-bottom: 12px;
+  }
+
+  .detail-label {
+    min-width: 180px;
+    font-size: 1.05rem;
+  }
+
+  .detail-value {
+    font-size: 1.05rem;
+  }
+
+  .detail-value.name-value {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .section-content,
+  .family-member {
+    font-size: 1.05rem;
+  }
+
+  .family-list {
+    padding-left: 25px;
+  }
+
+  .profile-footer {
+    margin-top: 50px;
+    padding-top: 30px;
+  }
+
+  .profile-footer p {
+    font-size: 1.5rem;
+  }
+}
+
+/* ========================================
+   LARGE DESKTOP STYLES (1400px and up)
+   ======================================== */
+@media (min-width: 1400px) {
+  .profile-container {
+    padding: 80px 120px;
+  }
+
+  .profile-content {
+    max-width: 1400px;
+    grid-template-columns: 1fr 400px;
+    gap: 80px;
+    padding: 60px;
+  }
+
+  .profile-photo {
+    width: 380px;
+    height: 480px;
+  }
+
+  .detail-label {
+    min-width: 200px;
+    font-size: 1.1rem;
+  }
+
+  .detail-value {
+    font-size: 1.1rem;
+  }
+
+  .detail-value.name-value {
+    font-size: 1.7rem;
+  }
+}
+
+/* ========================================
+   HOVER & INTERACTION EFFECTS
+   ======================================== */
+@media (hover: hover) {
+  .detail-group {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .detail-group:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(139, 69, 19, 0.15);
+  }
+
+  .photo-frame {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .photo-frame:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(139, 69, 19, 0.4);
+  }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+@media print {
+  .profile-container {
+    background: #fff;
+    padding: 20px;
+  }
+
+  .corner-decoration {
+    display: none;
+  }
+
+  .profile-content {
+    display: block;
+  }
+
+  .photo-section {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 180px;
+  }
+
+  .detail-group {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+}
