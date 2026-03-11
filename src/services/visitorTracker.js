@@ -2,7 +2,7 @@
 // Collects comprehensive visitor information and stores it locally
 
 const STORAGE_KEY = 'visitor_analytics_data';
-const ADMIN_PASSWORD = 'admin123'; // Change this to your preferred password
+const ADMIN_PASSWORD = 'admin1230000000000'; // Change this to your preferred password
 
 // Get all stored visitors
 export const getVisitors = () => {
