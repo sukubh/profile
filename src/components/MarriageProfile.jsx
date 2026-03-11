@@ -14,9 +14,7 @@ const MarriageProfile = () => {
 
       {/* Ganesha Header */}
       <div className="ganesha-header">
-        <svg className="ganesha-icon" viewBox="0 0 100 100" fill="currentColor">
-          <path d="M50 5C30 5 15 20 15 40C15 50 20 60 30 65C25 70 20 80 20 90H30C30 80 35 72 42 68C45 75 48 80 50 85C52 80 55 75 58 68C65 72 70 80 70 90H80C80 80 75 70 70 65C80 60 85 50 85 40C85 20 70 5 50 5ZM40 35C43 35 45 37 45 40C45 43 43 45 40 45C37 45 35 43 35 40C35 37 37 35 40 35ZM60 35C63 35 65 37 65 40C65 43 63 45 60 45C57 45 55 43 55 40C55 37 57 35 60 35ZM50 60C45 60 40 55 40 50H60C60 55 55 60 50 60Z"/>
-        </svg>
+        <div className="om-symbol">ॐ</div>
         <div className="ganesha-text">|| श्री गणेशाय नमः ||</div>
       </div>
 
@@ -115,7 +113,6 @@ const MarriageProfile = () => {
 
       {/* Footer */}
       <div className="profile-footer">
-        <p>॥ शुभ विवाह ॥</p>
       </div>
     </div>
   );
