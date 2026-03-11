@@ -50,6 +50,14 @@
   z-index: 1;
 }
 
+.om-symbol {
+  font-size: 3rem;
+  color: #c45c26;
+  margin-bottom: 5px;
+  text-shadow: 0 2px 4px rgba(196, 92, 38, 0.3);
+}
+
+
 .ganesha-icon {
   width: 60px;
   height: 60px;
@@ -466,3 +474,4 @@
     padding: 0;
   }
 }
+
