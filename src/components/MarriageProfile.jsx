@@ -1,8 +1,40 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './MarriageProfile.css';
 import profileData from '../data/profileData.json';
 
 const MarriageProfile = () => {
+  const images = profileData.profileImages || [profileData.profileImage];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
+  const goNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const goPrev = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    const diff = touchStartX.current - touchEndX.current;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) goNext();
+      else goPrev();
+    }
+  };
 
   return (
     <div className="profile-container">
@@ -23,7 +55,42 @@ const MarriageProfile = () => {
         {/* Photo Section */}
         <div className="photo-section">
           <div className="photo-frame">
-            <img src={profileData.profileImage} alt={profileData.name} className="profile-photo" />
+            <div
+              className="photo-slider"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
+              <div
+                className="photo-slider-track"
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              >
+                {images.map((img, index) => (
+                  <img
+                    key={index}
+                    src={img}
+                    alt={`${profileData.name} ${index + 1}`}
+                    className="profile-photo"
+                  />
+                ))}
+              </div>
+            </div>
+            {images.length > 1 && (
+              <>
+                <button className="slider-arrow slider-arrow-left" onClick={goPrev} aria-label="Previous photo">&#8249;</button>
+                <button className="slider-arrow slider-arrow-right" onClick={goNext} aria-label="Next photo">&#8250;</button>
+                <div className="slider-dots">
+                  {images.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`slider-dot ${index === currentIndex ? 'active' : ''}`}
+                      onClick={() => goToSlide(index)}
+                      aria-label={`Go to photo ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </div>
 

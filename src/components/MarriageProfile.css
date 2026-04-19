@@ -96,6 +96,22 @@
   box-shadow: 0 8px 30px rgba(139, 69, 19, 0.3);
 }
 
+.photo-slider {
+  width: 180px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.photo-slider-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.photo-slider-track .profile-photo {
+  flex-shrink: 0;
+  width: 180px;
+}
+
 .photo-frame::before {
   content: '';
   position: absolute;
@@ -103,6 +119,7 @@
   border: 2px solid rgba(255, 255, 255, 0.4);
   border-radius: 10px;
   pointer-events: none;
+  z-index: 2;
 }
 
 .profile-photo {
@@ -111,6 +128,63 @@
   object-fit: cover;
   border-radius: 8px;
   display: block;
+}
+
+/* Slider Arrows */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(139, 69, 19, 0.5);
+  color: #fff;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: background 0.2s ease;
+  line-height: 1;
+}
+
+.slider-arrow:hover {
+  background: rgba(139, 69, 19, 0.8);
+}
+
+.slider-arrow-left {
+  left: 12px;
+}
+
+.slider-arrow-right {
+  right: 12px;
+}
+
+/* Slider Dots */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(139, 69, 19, 0.3);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.slider-dot.active {
+  background: #c45c26;
+  transform: scale(1.3);
 }
 
 /* Details Section */
@@ -256,6 +330,14 @@
     padding: 10px;
   }
 
+  .photo-slider {
+    width: 250px;
+  }
+
+  .photo-slider-track .profile-photo {
+    width: 250px;
+  }
+
   .profile-photo {
     width: 250px;
     height: 300px;
@@ -329,6 +411,14 @@
     padding: 12px;
   }
 
+  .photo-slider {
+    width: 320px;
+  }
+
+  .photo-slider-track .profile-photo {
+    width: 320px;
+  }
+
   .profile-photo {
     width: 320px;
     height: 400px;
@@ -398,6 +488,14 @@
     padding: 60px;
   }
 
+  .photo-slider {
+    width: 380px;
+  }
+
+  .photo-slider-track .profile-photo {
+    width: 380px;
+  }
+
   .profile-photo {
     width: 380px;
     height: 480px;
@@ -461,6 +559,14 @@
     float: right;
     margin-left: 20px;
     margin-bottom: 10px;
+  }
+
+  .photo-slider {
+    width: 150px;
+  }
+
+  .photo-slider-track .profile-photo {
+    width: 150px;
   }
 
   .profile-photo {
